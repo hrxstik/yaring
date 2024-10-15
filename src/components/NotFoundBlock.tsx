@@ -1,0 +1,18 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import HomeButton from './HomeButton';
+
+const NotFoundBlock = () => {
+  return (
+    <div>
+      <h1>
+        <span>😯</span>
+        Что-то пошло не так...
+      </h1>
+      <p>Вы попали на несуществующую страницу!</p>
+      <HomeButton />
+    </div>
+  );
+};
+
+export default NotFoundBlock;
