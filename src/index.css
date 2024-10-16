@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .blue-block {
+    @apply bg-yaring-blue text-white p-4;
+  }
+  .orange-block {
+    @apply bg-yaring-orange text-white p-4;
+  }
+}
+@layer components {
+  .header {
+    @apply blue-block;
+  }
+  .footer {
+    @apply orange-block;
+  }
+  .navigation {
+    @apply font-bold;
+  }
+}
