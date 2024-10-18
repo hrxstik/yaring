@@ -3,7 +3,8 @@ import HomeButton from '../components/HomeButton';
 
 const LivingRules = () => {
   return (
-    <div>
+    <div className="living-rules">
+      <HomeButton />
       <HomeButton />
     </div>
   );

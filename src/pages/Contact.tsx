@@ -3,7 +3,8 @@ import HomeButton from '../components/HomeButton';
 
 const Contact = () => {
   return (
-    <div>
+    <div className="contact">
+      <HomeButton />
       <HomeButton />
     </div>
   );

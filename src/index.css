@@ -2,12 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  p,
+  h1,
+  h2 {
+    @apply text-yaring-blue;
+  }
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  .wrapper {
+    @apply flex flex-col min-h-full;
+  }
+}
+
 @layer utilities {
   .blue-block {
     @apply bg-yaring-blue text-white p-4;
   }
   .orange-block {
     @apply bg-yaring-orange text-white p-4;
+  }
+  .logo-image {
+    @apply w-10 h-10 bg-logo bg-cover bg-center inline-block;
+  }
+  .button {
+    @apply bg-yaring-orange text-white block max-w-fit py-2 px-8 m-2 rounded-lg;
+  }
+  .page {
+    @apply py-4 px-32 m-auto max-w-screen-2xl;
   }
 }
 @layer components {
@@ -18,6 +44,21 @@
     @apply orange-block;
   }
   .navigation {
-    @apply font-bold;
+    @apply flex gap-8 items-center justify-center;
+  }
+  .additional-info {
+    @apply underline text-sm;
+  }
+  .privacy-policy {
+    @apply page;
+  }
+  .privacy-policy div {
+    @apply mb-4;
+  }
+  .pricing {
+    @apply page;
+  }
+  .home-button {
+    @apply bg-white text-yaring-blue border-yaring-blue border block max-w-fit py-2 px-8 m-2 rounded-lg ml-auto;
   }
 }

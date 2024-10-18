@@ -1,12 +1,13 @@
 import React from 'react';
 import HomeButton from '../components/HomeButton';
 
-const Pricing = () => {
+const FAQ = () => {
   return (
-    <div className="pricing">
+    <div className="faq">
+      <HomeButton />
       <HomeButton />
     </div>
   );
 };
 
-export default Pricing;
+export default FAQ;
