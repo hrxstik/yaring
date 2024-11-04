@@ -3,7 +3,7 @@ import NotFoundBlock from '../components/NotFoundBlock';
 
 const NotFound: React.FC = () => {
   return (
-    <div className="not-found">
+    <div className="not-found page">
       <NotFoundBlock />
     </div>
   );

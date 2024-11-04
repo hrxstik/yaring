@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Logo = () => {
   return (
-    <div className="logo">
-      <Link to="/">
+    <div>
+      <Link to="/" className="logo">
         <div className="logo-image"></div>
+        {/* <span>Яринг</span> */}
       </Link>
     </div>
   );

@@ -9,6 +9,7 @@ import LivingRules from './pages/LivingRules';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Admin from './pages/Admin';
 import FAQ from './pages/FAQ';
+import Booking from './pages/Booking';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="booking" element={<Booking />} />
         </Route>
       </Routes>
     </div>

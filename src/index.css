@@ -49,7 +49,9 @@
   .additional-info {
     @apply underline text-sm;
   }
-  .privacy-policy {
+  .privacy-policy,
+  .contact,
+  .living-rules {
     @apply page;
   }
   .privacy-policy div {
@@ -60,5 +62,8 @@
   }
   .home-button {
     @apply bg-white text-yaring-blue border-yaring-blue border block max-w-fit py-2 px-8 m-2 rounded-lg ml-auto;
+  }
+  .logo {
+    @apply flex items-center flex-col;
   }
 }

@@ -3,7 +3,7 @@ import HomeButton from '../components/HomeButton';
 
 const Pricing = () => {
   return (
-    <div className="pricing">
+    <div className="pricing page">
       <HomeButton />
     </div>
   );
