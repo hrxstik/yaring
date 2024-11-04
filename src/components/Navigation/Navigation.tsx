@@ -9,8 +9,12 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <Logo />
-      <span onClick={() => scrollToElement('about')}>О нас</span>
-      <span onClick={() => scrollToElement('houseInfo')}>Домики</span>
+      <span className="cursor-pointer" onClick={() => scrollToElement('about')}>
+        О нас
+      </span>
+      <span className="cursor-pointer" onClick={() => scrollToElement('houseInfo')}>
+        Домики
+      </span>
       <Link to="pricing">Цены</Link>
       <Link to="faq">Частые вопросы</Link>
       <Link to="contact">Контакты</Link>

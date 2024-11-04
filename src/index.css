@@ -35,6 +35,12 @@
   .page {
     @apply py-4 px-32 m-auto max-w-screen-2xl;
   }
+  .secondary-button {
+    @apply bg-transparent text-white border-white border block max-w-fit py-2 px-8 m-2 rounded-lg;
+  }
+  .primary-button {
+    @apply bg-yaring-orange text-white block max-w-fit py-2 px-8 m-2 rounded-lg;
+  }
 }
 @layer components {
   .header {

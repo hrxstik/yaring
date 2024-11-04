@@ -28,16 +28,21 @@ const ImageSlider: React.FC = () => {
         alt={`Image ${currentIndex + 1}`}
         className="w-[512px] h-[512px] object-cover rounded-lg"
       />
-      <button
-        onClick={prevImage}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow">
-        &#60;
-      </button>
-      <button
-        onClick={nextImage}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow">
-        &#62;
-      </button>
+      {images.length && (
+        <button
+          onClick={prevImage}
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow">
+          &#60;
+        </button>
+      )}
+
+      {images.length && (
+        <button
+          onClick={nextImage}
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow">
+          &#62;
+        </button>
+      )}
     </div>
   );
 };

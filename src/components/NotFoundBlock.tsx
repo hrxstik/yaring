@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeButton from './HomeButton';
+import HomeButton from './buttons/HomeButton';
 
 const NotFoundBlock = () => {
   return (

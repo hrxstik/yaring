@@ -1,6 +1,6 @@
 import React from 'react';
 import { useScroll } from './Navigation/ScrollContext';
-import BookingButton from './BookingButton';
+import BookingButton from './buttons/BookingButton';
 import ImageSlider from './ImageSlider';
 
 interface Props {
@@ -25,7 +25,7 @@ export const About: React.FC<Props> = () => {
           Эта база станет отличным местом для семейного отдыха, романтического уикенда или дружеской
           встречи.
         </p>
-        <BookingButton />
+        <BookingButton className="primary-button" />
       </section>
     </div>
   );
