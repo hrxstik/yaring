@@ -7,7 +7,7 @@ interface Props {
 
 const BookingButton: React.FC<Props> = ({ className }) => {
   return (
-    <Link to="booking" className={className}>
+    <Link to="/booking" className={className}>
       <span>Выбрать даты</span>
     </Link>
   );
