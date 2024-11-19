@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useRef, ReactNode } from 'react';
 
-type ScrollElement = 'about' | 'houseInfo';
+export type ScrollElement = 'about' | 'houseInfo' | 'activities';
 
 interface ScrollContextType {
   scrollToElement: (element: ScrollElement) => void;
@@ -13,6 +13,7 @@ export const ScrollProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const refs = {
     about: useRef<HTMLDivElement>(null),
     houseInfo: useRef<HTMLDivElement>(null),
+    activities: useRef<HTMLDivElement>(null),
   };
 
   const scrollToElement = (element: ScrollElement) => {

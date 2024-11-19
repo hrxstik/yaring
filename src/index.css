@@ -5,7 +5,8 @@
 @layer base {
   p,
   h1,
-  h2 {
+  h2,
+  h3 {
     @apply text-yaring-blue;
   }
   h1 {
@@ -13,6 +14,9 @@
   }
   h2 {
     @apply text-2xl;
+  }
+  h3 {
+    @apply text-3xl;
   }
   .wrapper {
     @apply flex flex-col min-h-full;
@@ -30,16 +34,16 @@
     @apply w-10 h-10 bg-logo bg-cover bg-center inline-block;
   }
   .button {
-    @apply bg-yaring-orange text-white block max-w-fit py-2 px-8 m-2 rounded-lg;
+    @apply bg-yaring-orange text-white block max-w-fit py-2 px-8 m-2 rounded-full;
   }
   .page {
     @apply py-4 px-32 m-auto max-w-screen-2xl;
   }
   .secondary-button {
-    @apply bg-transparent text-white border-white border block max-w-fit py-2 px-8 m-2 rounded-lg;
+    @apply rounded-full bg-transparent text-white border-white border block max-w-fit py-2 px-8 m-2;
   }
   .primary-button {
-    @apply bg-yaring-orange text-white block max-w-fit py-2 px-8 m-2 rounded-lg;
+    @apply rounded-full bg-yaring-orange text-white block max-w-fit py-2 px-8;
   }
 }
 @layer components {
@@ -67,7 +71,7 @@
     @apply page;
   }
   .home-button {
-    @apply bg-white text-yaring-blue border-yaring-blue border block max-w-fit py-2 px-8 m-2 rounded-lg ml-auto;
+    @apply rounded-full bg-white text-yaring-blue border-yaring-blue border block max-w-fit py-2 px-8 m-2 ml-auto;
   }
   .logo {
     @apply flex items-center flex-col;

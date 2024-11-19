@@ -10,7 +10,7 @@ interface Props {
 export const About: React.FC<Props> = () => {
   const { refs } = useScroll();
   return (
-    <div ref={refs.about} className="grid grid-cols-2">
+    <div ref={refs.about} className="grid grid-cols-2" id="about">
       <ImageSlider />
       <section className="py-8 px-4">
         <h2 className="text-3xl font-bold mb-4">О нас</h2>

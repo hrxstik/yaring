@@ -6,7 +6,7 @@ import HousesButton from './buttons/HousesButton';
 const HouseInfo = () => {
   const { refs } = useScroll();
   return (
-    <div ref={refs.houseInfo} className="grid grid-cols-2 blue-block">
+    <div ref={refs.houseInfo} className="grid grid-cols-2 blue-block" id="houseInfo">
       <section className="py-8 px-8">
         <h2 className="text-3xl font-bold mb-4 text-white">Домики</h2>
         <p className="mb-6 text-white">
@@ -14,7 +14,7 @@ const HouseInfo = () => {
           в нашем уникальном доме. С его характерной архитектурой и современными удобствами, этот
           дом станет идеальным местом для отдыха от повседневной суеты.
         </p>
-        <div className="flex">
+        <div className="flex items-center">
           <BookingButton className="primary-button" />
           <HousesButton className="secondary-button" />
         </div>

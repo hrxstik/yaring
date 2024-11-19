@@ -1,10 +1,12 @@
-import React from 'react';
 import ActivityCard from './ActivityCard';
+import { useScroll } from './Navigation/ScrollContext';
 
 const Activities = () => {
+  const { refs } = useScroll();
+
   return (
     <div>
-      <div className="py-6">
+      <div ref={refs.activities} className="py-6" id="activities">
         <h2 className="blue-block max-w-fit">Активности</h2>
       </div>
       <div className="grid grid-cols-2 grid-rows-3">
