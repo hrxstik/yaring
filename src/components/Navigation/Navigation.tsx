@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Logo from '../Logo';
 import { ScrollElement, useScroll } from './ScrollContext';
 import SocialLinks from '../SocialLinks';
-import Telephone from '../Telephone';
+import Telephone from '../buttons/Telephone';
 
 const Navigation = () => {
   const { scrollToElement } = useScroll();

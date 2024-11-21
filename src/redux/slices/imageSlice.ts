@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 interface ImageState {
   images: string[];
@@ -35,7 +35,7 @@ const imageSlice = createSlice({
       })
       .addCase(fetchImages.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message || 'Failed to fetch images';
+        state.error = action.error.message || 'Failed to fetch activities images';
       });
   },
 });

@@ -1,7 +1,6 @@
-import React from 'react';
 import HomeButton from '../components/buttons/HomeButton';
-import SocialLinks, { ESocialLinks } from '../components/SocialLinks';
-import Telephone from '../components/Telephone';
+import { ESocialLinks } from '../components/SocialLinks';
+import Telephone from '../components/buttons/Telephone';
 import YandexMap from '../components/YandexMap';
 
 const Contact = () => {
@@ -9,7 +8,7 @@ const Contact = () => {
     <div className="contact page">
       <HomeButton />
       <div className="flex flex-col gap-4">
-        <h1 className="mb-10">Контакты</h1>
+        <h1>Контакты</h1>
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -31,7 +30,7 @@ const Contact = () => {
           <Telephone />
           <p>Звонок администрации</p>
         </div>
-        <h1>На машине:</h1>
+        <h1 className="mt-10">На машине:</h1>
         <a
           className="primary-button"
           href="yandexnavi://build_route_on_map?lat_to=56.557896&lon_to=37.52152">

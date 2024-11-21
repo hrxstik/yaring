@@ -7,7 +7,7 @@ interface Props {
 
 const HousesButton: React.FC<Props> = ({ className }) => {
   return (
-    <Link to="pricing" className={className}>
+    <Link to="/pricing" className={className}>
       <span>Подробнее о домиках</span>
     </Link>
   );
