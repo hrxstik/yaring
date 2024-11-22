@@ -2,9 +2,10 @@ import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import imageReducer from './slices/imageSlice';
 import activitiesReducer from './slices/activivitySlice';
+import questionsReducer from './slices/questionSlice';
 
 export const store = configureStore({
-  reducer: { imageReducer, activitiesReducer },
+  reducer: { imageReducer, activitiesReducer, questionsReducer },
 });
 
 type AppStore = typeof store;

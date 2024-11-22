@@ -32,7 +32,7 @@ const Navigation = () => {
       </Link>
       <Link to="pricing">Цены</Link>
       <Link to="/#activities">Активности</Link>
-      <Link to="faq">Частые вопросы</Link>
+      <Link to="/#questions">Частые вопросы</Link>
       <Link to="contact">Контакты</Link>
       <div className="flex items-center gap-4 ml-8">
         <SocialLinks />

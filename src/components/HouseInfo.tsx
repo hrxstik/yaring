@@ -1,36 +1,77 @@
 import React from 'react';
-import { useScroll } from './Navigation/ScrollContext';
-import BookingButton from './buttons/BookingButton';
-import HousesButton from './buttons/HousesButton';
 
-const HouseInfo = () => {
-  const { refs } = useScroll();
+interface Props {
+  className?: string;
+  kitchenProps: string[];
+  livingroomProps: string[];
+  bathRoomProps: string[];
+  terraceProps: string[];
+  bedroomProps: string[];
+  additionalProps: string[];
+}
+
+export const HouseInfo: React.FC<Props> = ({
+  className,
+  kitchenProps,
+  livingroomProps,
+  bathRoomProps,
+  terraceProps,
+  bedroomProps,
+  additionalProps,
+}) => {
   return (
-    <div ref={refs.houseInfo} className="grid grid-cols-2 blue-block" id="houseInfo">
-      <section className="py-8 px-8">
-        <h2 className="text-3xl font-bold mb-4 text-white">Домики</h2>
-        <p className="mb-6 text-white">
-          Ваш идеальный уголок уединения и комфорта на природе. Погрузитесь в атмосферу уюта и стиля
-          в нашем уникальном доме. С его характерной архитектурой и современными удобствами, этот
-          дом станет идеальным местом для отдыха от повседневной суеты.
-        </p>
-        <div className="flex items-center">
-          <BookingButton className="primary-button" />
-          <HousesButton className="secondary-button" />
+    <div className={className}>
+      <p className="blue-block max-w-fit mb-4">Внутри каждого домика:</p>
+      <div className="grid grid-cols-4 grid-rows-2 gap-2">
+        <div className="card col-span-1 row-span-2">
+          <p className="font-medium">Кухня</p>
+          <ul>
+            {kitchenProps.map((prop) => (
+              <li>- {prop}</li>
+            ))}
+          </ul>
         </div>
-      </section>
-      <section className="py-8 px-8 text-xl">
-        <ul className="list-disc list-inside mb-6 flex flex-col gap-4">
-          <li>Современный ремонт</li>
-          <li>Полностью оборудованная кухня</li>
-          <li>Терраса для отдыха</li>
-          <li>Проекторы в домах</li>
-          <li>Кондиционер</li>
-          <li>Зона для барбекю</li>
-        </ul>
-      </section>
+        <div className="card col-span-1 ">
+          <p className="font-medium">Гостиная</p>
+          <ul>
+            {livingroomProps.map((prop) => (
+              <li>- {prop}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="card col-span-1">
+          <p className="font-medium">Ванная комната</p>
+          <ul>
+            {bathRoomProps.map((prop) => (
+              <li>- {prop}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="card col-span-1 row-span-2">
+          <p className="font-medium">Терасса и зона отдыха</p>
+          <ul>
+            {terraceProps.map((prop) => (
+              <li>- {prop}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="card col-span-1">
+          <p className="font-medium">Спальня</p>
+          <ul>
+            {bedroomProps.map((prop) => (
+              <li>- {prop}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="card col-span-1">
+          <p className="font-medium">А также</p>
+          <ul>
+            {additionalProps.map((prop) => (
+              <li>- {prop}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
-
-export default HouseInfo;

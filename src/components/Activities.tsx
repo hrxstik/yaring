@@ -22,15 +22,13 @@ const Activities = () => {
       <div ref={refs.activities} className="py-6" id="activities">
         <h2 className="blue-block max-w-fit">Активности</h2>
       </div>
-      {loading && <p>Загрузка изображений...</p>}
-      {error && <p>{error}</p>}
       <div className="grid grid-cols-2 grid-rows-3">
         {headings.map((heading, index) => (
           <ActivityCard
             key={index}
             heading={heading || ''}
             description={descriptions[index] || ''}
-            image={images[index] || ''}
+            image={images[index] || error || ''}
           />
         ))}
       </div>

@@ -7,8 +7,7 @@ import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import LivingRules from './pages/LivingRules';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import Admin from './pages/Admin';
-import FAQ from './pages/FAQ';
+import Login from './pages/Login';
 import Booking from './pages/Booking';
 
 function App() {
@@ -22,8 +21,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="living-rules" element={<LivingRules />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="faq" element={<FAQ />} />
-          <Route path="admin" element={<Admin />} />
+          <Route path="login" element={<Login />} />
           <Route path="booking" element={<Booking />} />
         </Route>
       </Routes>

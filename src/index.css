@@ -6,7 +6,9 @@
   p,
   h1,
   h2,
-  h3 {
+  h3,
+  summary,
+  details {
     @apply text-yaring-blue;
   }
   h1 {
@@ -40,10 +42,13 @@
     @apply py-4 px-32 m-auto max-w-screen-2xl;
   }
   .secondary-button {
-    @apply rounded-full bg-transparent text-white border-white border block max-w-fit py-2 px-8 m-2;
+    @apply select-none rounded-full bg-transparent text-white border-white border block max-w-fit py-2 px-8 m-2;
   }
   .primary-button {
-    @apply rounded-full bg-yaring-orange text-white block max-w-fit py-2 px-8;
+    @apply select-none rounded-full bg-yaring-orange text-white block max-w-fit py-2 px-8;
+  }
+  .card {
+    @apply bg-white text-yaring-blue rounded-2xl p-4 drop-shadow;
   }
 }
 @layer components {
@@ -71,7 +76,7 @@
     @apply page;
   }
   .home-button {
-    @apply rounded-full bg-white text-yaring-blue border-yaring-blue border block max-w-fit py-2 px-8 m-2 ml-auto;
+    @apply select-none rounded-full bg-white text-yaring-blue border-yaring-blue border block max-w-fit py-2 px-8 m-2 ml-auto;
   }
   .logo {
     @apply flex items-center flex-col;
