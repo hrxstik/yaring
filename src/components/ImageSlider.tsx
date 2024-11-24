@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState, useAppDispatch } from '../redux/store';
-import { fetchImages } from '../redux/slices/imageSlice';
+import { fetchCommonImages } from '../redux/slices/imageSlice';
 
 const ImageSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,7 +10,7 @@ const ImageSlider: React.FC = () => {
   const images = useSelector((state: RootState) => state.imageReducer.images);
 
   useEffect(() => {
-    dispatch(fetchImages());
+    dispatch(fetchCommonImages());
   }, [dispatch]);
 
   const nextImage = () => {

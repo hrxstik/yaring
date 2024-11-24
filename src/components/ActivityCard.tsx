@@ -10,7 +10,7 @@ const ActivityCard: React.FC<Props> = ({ heading, description, image }) => {
   return (
     <div className="">
       <h2>{heading}</h2>
-      <img src={image} alt={image} />
+      <img src={image} alt="Не удалось загрузить картинку" />
       {description}
     </div>
   );

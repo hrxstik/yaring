@@ -8,9 +8,10 @@ interface Props {
   time: string;
   checkIn: string;
   checkOut: string;
+  button: boolean;
 }
 
-const PricingInfo: React.FC<Props> = ({ header, info, price, time, checkIn, checkOut }) => {
+const PricingInfo: React.FC<Props> = ({ header, info, price, time, checkIn, checkOut, button }) => {
   return (
     <div className="py-8 px-4 flex flex-col gap-4">
       <h2>{header}</h2>
@@ -24,7 +25,7 @@ const PricingInfo: React.FC<Props> = ({ header, info, price, time, checkIn, chec
           <span className="mr-5 p-2 border-yaring-blue border rounded-lg">Выезд до {checkOut}</span>
         </div>
       )}
-      <BookingButton className="primary-button" />
+      {button && <BookingButton className="primary-button" />}
     </div>
   );
 };

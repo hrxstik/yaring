@@ -12,13 +12,16 @@ const initialState: ImageState = {
   error: null,
 };
 
-export const fetchImages = createAsyncThunk<string[], void>('images/fetchImages', async () => {
-  const response = await fetch('http://localhost:5000/api/images');
-  if (!response.ok) {
-    throw new Error('Failed to fetch images');
-  }
-  return response.json();
-});
+export const fetchCommonImages = createAsyncThunk<string[], void>(
+  'images/fetchCommonImages',
+  async () => {
+    const response = await fetch('http://localhost:5000/api/commonImages');
+    if (!response.ok) {
+      throw new Error('Failed to fetch images');
+    }
+    return response.json();
+  },
+);
 
 const imageSlice = createSlice({
   name: 'images',
@@ -26,16 +29,16 @@ const imageSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchImages.pending, (state) => {
+      .addCase(fetchCommonImages.pending, (state) => {
         state.loading = true;
       })
-      .addCase(fetchImages.fulfilled, (state, action) => {
+      .addCase(fetchCommonImages.fulfilled, (state, action) => {
         state.loading = false;
         state.images = action.payload;
       })
-      .addCase(fetchImages.rejected, (state, action) => {
+      .addCase(fetchCommonImages.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message || 'Failed to fetch activities images';
+        state.error = action.error.message || 'Failed to fetch commmon images';
       });
   },
 });

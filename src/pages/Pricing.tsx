@@ -18,6 +18,7 @@ const Pricing = () => {
           time="сутки"
           checkIn="14.00"
           checkOut="11.00"
+          button={true}
         />
       </div>
       <HouseInfo
@@ -58,6 +59,7 @@ const Pricing = () => {
           time="час"
           checkIn=""
           checkOut=""
+          button={true}
         />
       </div>
       <HomeButton />

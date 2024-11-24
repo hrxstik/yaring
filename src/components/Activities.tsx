@@ -28,7 +28,7 @@ const Activities = () => {
             key={index}
             heading={heading || ''}
             description={descriptions[index] || ''}
-            image={images[index] || error || ''}
+            image={loading ? '' : images[index] || error || ''}
           />
         ))}
       </div>

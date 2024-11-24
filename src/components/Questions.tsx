@@ -16,8 +16,8 @@ export const Questions: React.FC<Props> = ({ className }) => {
         <h2 className="blue-block max-w-fit">Частые вопросы</h2>
       </div>
       {questions.map((question, index) => (
-        <div>
-          <details key={index} className="py-4 select-none">
+        <div key={index}>
+          <details className="py-4 select-none">
             <summary className="transition-all">{question}</summary>
             <p>{answers[index]}</p>
           </details>
